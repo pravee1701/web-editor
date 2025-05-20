@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* For WebKit browsers like Chrome, Safari, Edge */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* For IE and Edge (older versions) */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;  /* Width of the scrollbar */
+    height: 8px; /* Height of the scrollbar (for horizontal) */
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #2d3748; /* bg-gray-800 */
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4a5568; /* bg-gray-600 */
+    border-radius: 10px;
+    border: 2px solid #2d3748; /* Creates padding around thumb */
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #718096; /* bg-gray-500 */
+  }
+  /* For Firefox */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4a5568 #2d3748; /* thumb and track color */
+  }
+  
+  /* Basic animations for modal if you want them */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  .animate-slideUp {
+    animation: slideUp 0.3s ease-out forwards;
+  }
